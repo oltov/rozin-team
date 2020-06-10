@@ -1,0 +1,19 @@
+.slider-btn {
+  &__arrows {
+    svg {
+      width: 21px;
+      height: 40px;
+    }
+  }
+
+  &__prev,
+  &__next {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__prev {
+    transform: rotate(180deg);
+  }
+}

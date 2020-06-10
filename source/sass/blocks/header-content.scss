@@ -1,10 +1,29 @@
 .header-content {
   padding-top: 200px;
-  padding-right: 440px;
+  padding-right: 47%;
+
+  @include viewport--sm {
+    padding-top: 40vh;
+    padding-right: 23%;
+  }
 
   &__title {
     font-size: 72px;
     line-height: 80px;
     letter-spacing: 0.5px;
+
+    @include viewport--md {
+      font-size: 52px;
+      line-height: 76px;
+    }
+
+    @include viewport--sm {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__link {
+    color: inherit;
   }
 }
