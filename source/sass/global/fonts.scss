@@ -1,0 +1,15 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "";
+
+  font-display: swap;
+  src:
+    url("../fonts/.woff2") format("woff2"),
+    url("../fonts/.woff") format("woff");
+}
+
+@import 'mixins.scss';
+@include fontface(Ubuntu, Ubuntu, ubuntu, 400, normal);
+@include fontface(Ubuntu, Ubuntumedium, ubuntumedium, 500, normal);
+@include fontface(Ubuntu, Ubuntubold, ubuntubold, 700, normal);
