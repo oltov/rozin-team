@@ -31,13 +31,13 @@
 
 @mixin fontface($family, $localname, $filename, $weight, $style) {
   @font-face {
-      font-family: $family;
-      src: local('#{$localname}'),
-          url('/fonts/#{$filename}.woff2') format('woff2'),
-          url('/fonts/#{$filename}.woff') format('woff');
-      font-weight: $weight;
-      font-style: $style;
-      font-display: swap;
+    font-family: $family;
+    src: local("#{$localname}"),
+      url("/fonts/#{$filename}.woff2") format("woff2"),
+      url("/fonts/#{$filename}.woff") format("woff");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
   }
 }
 

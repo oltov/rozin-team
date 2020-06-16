@@ -2,7 +2,7 @@
 //---------------------------------
 
 @import "vendor/normalize";
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 // Global
 //---------------------------------
@@ -19,19 +19,16 @@
 //---------------------------------
 
 @import "blocks/header";
-@import "blocks/header";
 @import "blocks/header-wrapper";
 @import "blocks/header-content";
 @import "blocks/slider";
 @import "blocks/slider-btn";
-
-
 @import "blocks/footer";
 @import "blocks/modal";
 
-.swiper-container {
-  height: 600px;
-}
+// .swiper-container {
+//   height: 600px;
+// }
 
 
 // используйте это для отключения ховеров на тач устройствах

@@ -8,9 +8,17 @@
   }
 
   &__title {
+    font-weight: 400;
     font-size: 72px;
     line-height: 80px;
     letter-spacing: 0.5px;
+    position: relative;
+    left: -1000px;
+    opacity: 0;
+
+    &--event {
+      animation: event-title 1.2s ease forwards;
+    }
 
     @include viewport--md {
       font-size: 52px;
@@ -23,7 +31,29 @@
     }
   }
 
+  &__wrapper {
+    position: relative;
+    max-width: max-content;
+    left: -1000px;
+    opacity: 0;
+
+    &--event {
+      animation: event-title 1.2s ease 0.2s forwards;
+    }
+  }
+
   &__link {
     color: inherit;
+  }
+}
+
+@keyframes event-title {
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate3d(1000px, 0, 0);
+    opacity: 1;
   }
 }
