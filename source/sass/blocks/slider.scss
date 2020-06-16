@@ -1,0 +1,18 @@
+.slider {
+  &__item {
+    //height: 670px;
+    img {
+      width: 680px;
+      height: 30vw;
+      max-height: 500px;
+      object-fit: cover;
+      object-position: center;
+
+      @include viewport--mobile {
+        width: 100%;
+        height: 46vw;
+        max-height: 320px;
+      }
+    }
+  }
+}

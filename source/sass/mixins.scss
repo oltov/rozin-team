@@ -5,39 +5,39 @@
 }
 
 // Desktop first
-@mixin viewport--xl {
-  @media (max-width: $viewport--xxl - 1) {
+@mixin viewport--desktop-full {
+  @media (max-width: $width--desktop-full) {
     @content;
   }
 }
 
-@mixin viewport--lg {
-  @media (max-width: $viewport--xl - 1) {
+@mixin viewport--desktop {
+  @media (max-width: $width--desktop) {
     @content;
   }
 }
 
-@mixin viewport--md {
-  @media (max-width: $viewport--lg - 1) {
+@mixin viewport--tablet {
+  @media (max-width: $width--tablet) {
     @content;
   }
 }
 
-@mixin viewport--sm {
-  @media (max-width: $viewport--md - 1) {
+@mixin viewport--mobile {
+  @media (max-width: $width--mobile) {
     @content;
   }
 }
 
 @mixin fontface($family, $localname, $filename, $weight, $style) {
   @font-face {
-      font-family: $family;
-      src: local('#{$localname}'),
-          url('/fonts/#{$filename}.woff2') format('woff2'),
-          url('/fonts/#{$filename}.woff') format('woff');
-      font-weight: $weight;
-      font-style: $style;
-      font-display: swap;
+    font-family: $family;
+    src: local("#{$localname}"),
+      url("/fonts/#{$filename}.woff2") format("woff2"),
+      url("/fonts/#{$filename}.woff") format("woff");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
   }
 }
 

@@ -1,6 +1,11 @@
 .footer {
-  min-height: 100px;
-  padding: 0 60px;
+  background-color: $color-default-black;
+  padding: 25px 0;
+  text-align: center;
 
-  background-color: $color-blue;
+  span {
+    margin-bottom: 10px;
+    display: block;
+    letter-spacing: 1.4px;
+  }
 }
