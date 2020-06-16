@@ -8,10 +8,10 @@
       object-fit: cover;
       object-position: center;
 
-      @include viewport--sm {
-        width: 100%px;
+      @include viewport--mobile {
+        width: 100%;
         height: 46vw;
-      max-height: 320px;
+        max-height: 320px;
       }
     }
   }

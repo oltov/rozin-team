@@ -8,12 +8,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @include viewport--md {
+  @include viewport--tablet {
     font-size: 20px;
     line-height: 20px;
   }
 
-  @include viewport--sm {
+  @include viewport--mobile {
     font-size: 16px;
     line-height: 20px;
   }

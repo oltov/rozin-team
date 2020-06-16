@@ -13,7 +13,7 @@
     cursor: pointer;
     animation: header-arrow 1s ease-in-out alternate-reverse infinite;
 
-    @include viewport--sm {
+    @include viewport--mobile {
       bottom: 15px;
     }
 

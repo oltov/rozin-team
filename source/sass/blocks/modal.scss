@@ -53,7 +53,7 @@
     background-color: $color-white;
     border-radius: 8px;
 
-    @include viewport--sm {
+    @include viewport--tablet {
       width: 100%;
       padding: 20px;
     }

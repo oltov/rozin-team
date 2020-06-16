@@ -31,11 +31,11 @@ $modal-transition-settings:         0.6s cubic-bezier(0.55, 0, 0.1, 1);
 // Viewports
 //---------------------------------
 
-$viewport--sm:                      320px;
-$viewport--md:                      768px;
-$viewport--lg:                      1024px;
-$viewport--xl:                      1440px;
-$viewport--xxl:                     1920px;
+$width--mobile-min:                      320px;
+$width--mobile:                          767px;
+$width--tablet:                          1023px;
+$width--desktop:                         1439px;
+$width--desktop-full:                    1919px;
 
 // Retina
 //---------------------------------
