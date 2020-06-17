@@ -72,8 +72,8 @@
     </div>
   </div>
 
-  <main class="container">
-    <section class="skills">
+  <main>
+    <section class="skills container">
       <h2 class="skills__title">Мои навыки</h2>
       <ul class="skills__list">
         <li class="skills__item">
@@ -137,8 +137,10 @@
       </ul>
     </section>
 
-    <section class="slider">
-      <div class="swiper-container">
+    @@include("source/html/components/goals.html")
+
+    <section class="slider container">
+      <div class="swiper-container" id="main-slider">
         <div class="slider__list swiper-wrapper">
           <div class="slider__item swiper-slide">
             <img src="img/content/test-img-1.jpg" alt="">
@@ -176,7 +178,7 @@
   </main>
 
 
-  <footer class="footer">
+  <footer class="footer container">
     <span class="footer__name">Виктор Розин</span>
     <ul class="header__social-list header__social-list--footer">
       <li class="header__social-item">
