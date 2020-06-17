@@ -1,5 +1,6 @@
 .slider-btn {
   margin-bottom: 50px;
+
   &__arrows {
     margin-left: auto;
     margin-top: 40px;
@@ -22,16 +23,114 @@
     transform: rotate(180deg);
     margin-right: 20px;
   }
+
+  &__toggles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__toggle {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &--goals {
+      background-color: #b49e7e;
+      padding: 20px;
+      border-radius: 3px;
+      font-size: 18px;
+      line-height: 22px;
+      outline: none;
+      transition:
+        background-color 0.1s ease-in-out,
+        opacity 0.1s ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &--active-goal {
+      background-color: #B7BBB3;
+      opacity: 1;
+      box-shadow: none;
+
+      &:hover {
+        opacity: unset;
+      }
+    }
+  }
 }
+
+
+    @include viewport--tablet {
+      .slider-btn {
+        &__arrows {
+          margin-top: 20px;
+
+          svg {
+            width: 15px;
+            height: 30px;
+          }
+        }
+    
+        &__toggle {
+          &--goals {
+            font-size: 16px;
+            line-height: 18px;
+            padding: 14px;
+
+            &:hover {
+              opacity: unset;
+            }
+
+            &:active {
+              opacity: unset;
+            }
+          }
+        }
+      }
+    }
 
 @include viewport--mobile {
   .slider-btn {
+    margin-bottom: 20px;
+
     &__arrows {
       margin-top: 20px;
 
       svg {
         width: 15px;
         height: 30px;
+      }
+    }
+
+    &__toggles {
+      justify-content: start;
+    }
+
+    &__toggle {
+      margin-bottom: 15px;
+
+      &--goals {
+        font-size: 14px;
+        line-height: 16px;
+        width: 46%;
+        padding: 14px 7px;
+        flex-grow: 1;
+
+        &:nth-child(odd) {
+          margin-right: 15px;
+        }
+
+        &:nth-child(even) {
+          margin-right: 0;
+        }
       }
     }
   }
