@@ -1,6 +1,16 @@
 .slider-btn {
   margin-bottom: 50px;
 
+  &--inner-slider {
+    margin-bottom: 0;
+    position: absolute;
+    z-index: 5;
+    left: 20px;
+    right: 20px;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+  }
+
   &__arrows {
     margin-left: auto;
     margin-top: 40px;
@@ -10,6 +20,12 @@
       width: 21px;
       height: 40px;
     }
+
+    &--programm {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0;
+    }
   }
 
   &__prev,
@@ -17,11 +33,28 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+
+    &--inner-slider {
+      // position: absolute;
+      // z-index: 5;
+      // top: 50%;
+      // left: 20px;
+      // transform: translate3d(0, -50%, 0);
+
+      svg polyline {
+        stroke-width: 3px;
+        stroke: #fff;
+      }
+    }
   }
 
   &__prev {
     transform: rotate(180deg);
     margin-right: 20px;
+
+    &--inner-slider {
+      margin-right: 0;
+    }
   }
 
   &__toggles {
@@ -67,38 +100,42 @@
   }
 }
 
+  @include viewport--tablet {
+    .slider-btn {
+      &__arrows {
+        margin-top: 20px;
 
-    @include viewport--tablet {
-      .slider-btn {
-        &__arrows {
-          margin-top: 20px;
-
-          svg {
-            width: 15px;
-            height: 30px;
-          }
+        svg {
+          width: 15px;
+          height: 30px;
         }
-    
-        &__toggle {
-          &--goals {
-            font-size: 16px;
-            line-height: 18px;
-            padding: 14px;
+      }
+  
+      &__toggle {
+        &--goals {
+          font-size: 16px;
+          line-height: 18px;
+          padding: 14px;
 
-            &:hover {
-              opacity: unset;
-            }
+          &:hover {
+            opacity: unset;
+          }
 
-            &:active {
-              opacity: unset;
-            }
+          &:active {
+            opacity: unset;
           }
         }
       }
     }
+  }
 
 @include viewport--mobile {
   .slider-btn {
+    &--inner-slider {
+      left: 10px;
+      right: 10px;
+    }
+
     margin-bottom: 20px;
 
     &__arrows {
