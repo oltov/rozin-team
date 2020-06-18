@@ -3,6 +3,10 @@ const initSliderSwiper = () => {
 
   const slider = document.querySelector(`#main-slider`);
   const goals = document.querySelector(`#goals-slider`);
+  const programSlider01 = document.querySelector(`#program-slider-1`);
+  const programSlider02 = document.querySelector(`#program-slider-2`);
+  const programSlider03 = document.querySelector(`#program-slider-3`);
+
   const goalsTabs = document.querySelectorAll(`[data-goal-index]`);
 
   const newSlider = new Swiper(slider, {
@@ -49,6 +53,51 @@ const initSliderSwiper = () => {
     effect: 'fade',
     fadeEffect: {
       crossFade: true
+    }
+  });
+
+  const programSlider = new Swiper(programSlider01, {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    speed: 600,
+    loop: true,
+    // autoplay: {
+    //   delay: 3000,
+    // },
+    disableOnInteraction: false,
+    navigation: {
+      nextEl: `[data-inner-slider=next-1]`,
+      prevEl: `[data-inner-slider=prev-1]`,
+    }
+  });
+
+  new Swiper(programSlider02, {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    speed: 600,
+    loop: true,
+    // autoplay: {
+    //   delay: 3000,
+    // },
+    disableOnInteraction: false,
+    navigation: {
+      nextEl: `[data-inner-slider=next-2]`,
+      prevEl: `[data-inner-slider=prev-2]`,
+    }
+  });
+
+  new Swiper(programSlider03, {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    speed: 600,
+    loop: true,
+    // autoplay: {
+    //   delay: 3000,
+    // },
+    disableOnInteraction: false,
+    navigation: {
+      nextEl: `[data-inner-slider=next-3]`,
+      prevEl: `[data-inner-slider=prev-3]`,
     }
   });
 };
