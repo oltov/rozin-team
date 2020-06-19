@@ -1,5 +1,7 @@
 .slider-btn {
-  margin-bottom: 50px;
+  &--goals {
+    margin-bottom: 70px;
+  }
 
   &--inner-slider {
     margin-bottom: 0;
@@ -35,15 +37,9 @@
     cursor: pointer;
 
     &--inner-slider {
-      // position: absolute;
-      // z-index: 5;
-      // top: 50%;
-      // left: 20px;
-      // transform: translate3d(0, -50%, 0);
-
       svg polyline {
         stroke-width: 3px;
-        stroke: #fff;
+        stroke: #ffffff;
       }
     }
   }
@@ -89,7 +85,7 @@
     }
 
     &--active-goal {
-      background-color: #B7BBB3;
+      background-color: #b7bbb3;
       opacity: 1;
       box-shadow: none;
 
@@ -100,43 +96,43 @@
   }
 }
 
-  @include viewport--tablet {
-    .slider-btn {
-      &__arrows {
-        margin-top: 20px;
+@include viewport--tablet {
+  .slider-btn {
+    &__arrows {
+      margin-top: 20px;
 
-        svg {
-          width: 15px;
-          height: 30px;
-        }
+      svg {
+        width: 15px;
+        height: 30px;
       }
-  
-      &__toggle {
-        &--goals {
-          font-size: 16px;
-          line-height: 18px;
-          padding: 14px;
+    }
 
-          &:hover {
-            opacity: unset;
-          }
+    &__toggle {
+      &--goals {
+        font-size: 16px;
+        line-height: 18px;
+        padding: 14px;
 
-          &:active {
-            opacity: unset;
-          }
+        &:hover {
+          opacity: unset;
+        }
+
+        &:active {
+          opacity: unset;
         }
       }
     }
   }
+}
 
 @include viewport--mobile {
   .slider-btn {
+    margin-bottom: 20px;
+
     &--inner-slider {
       left: 10px;
       right: 10px;
     }
-
-    margin-bottom: 20px;
 
     &__arrows {
       margin-top: 20px;

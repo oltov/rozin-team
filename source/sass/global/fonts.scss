@@ -1,4 +1,5 @@
 @import "mixins.scss";
+@include fontface(Ubuntu, Ubuntu-Light, ubuntu-light, 300, normal);
 @include fontface(Ubuntu, Ubuntu, ubuntu, 400, normal);
 @include fontface(Ubuntu, Ubuntumedium, ubuntumedium, 500, normal);
 @include fontface(Ubuntu, Ubuntubold, ubuntubold, 700, normal);
