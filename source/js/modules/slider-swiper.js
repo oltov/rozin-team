@@ -9,42 +9,34 @@ const initSliderSwiper = () => {
 
   const goalsTabs = document.querySelectorAll(`[data-goal-index]`);
 
-  const newSlider = new Swiper(slider, {
+  new Swiper(slider, {
     slidesPerView: 1,
     spaceBetween: 0,
     speed: 600,
     loop: true,
-    effect: 'fade',
+    effect: `fade`,
     fadeEffect: {
       crossFade: true
     },
     navigation: {
       nextEl: `#top-slider-next`,
       prevEl: `#top-slider-prev`,
-    },
-
-    // breakpoints: {
-    //   768: {
-    //     slidesPerView: 2,
-    //   },
-    //   1024: {
-    //     slidesPerView: 1,
-    //   }
-    // }
+    }
   });
 
   const toggleSwitch = () => {
-    if(goalsTabs) {
+
+    if (goalsTabs) {
       goalsTabs.forEach(toggle => {
-        toggle.addEventListener('click', (evt) => {
+
+        toggle.addEventListener(`click`, (evt) => {
           goalsTabs.forEach(btn => {
-            btn.classList.remove('slider-btn__toggle--active-goal')
+            btn.classList.remove(`slider-btn__toggle--active-goal`);
           });
-          goalsSlider.slideTo(evt.target.getAttribute('data-goal-index'));
-          evt.target.classList.add('slider-btn__toggle--active-goal')
-          console.log(evt.target.getAttribute('data-goal-index'))
-        })
-      })
+          goalsSlider.slideTo(evt.target.getAttribute(`data-goal-index`));
+          evt.target.classList.add(`slider-btn__toggle--active-goal`);
+        });
+      });
     }
   };
 
@@ -54,13 +46,13 @@ const initSliderSwiper = () => {
     slidesPerView: 1,
     speed: 600,
     loop: true,
-    effect: 'fade',
+    effect: `fade`,
     fadeEffect: {
       crossFade: true
     }
   });
 
-  const programSlider = new Swiper(programSlider01, {
+  new Swiper(programSlider01, {
     slidesPerView: 1,
     spaceBetween: 0,
     speed: 600,

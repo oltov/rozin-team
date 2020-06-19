@@ -11,3 +11,11 @@ env:
 
 extends:
   "htmlacademy/es6"
+
+rules:
+  arrow-parens:
+    - off
+  no-new:
+    - off
+  no-undef:
+    - off

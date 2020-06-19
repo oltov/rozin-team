@@ -5,7 +5,7 @@
     display: flex;
 
     &--reverse {
-        flex-direction: row-reverse;
+      flex-direction: row-reverse;
     }
   }
 
@@ -17,7 +17,7 @@
 
   &__content {
     width: 50%;
-    background-color: #F2F2E9;
+    background-color: #f2f2e9;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +30,6 @@
       line-height: 26px;
       color: #3f3d3d;
       max-width: 550px;
-      margin: 0;
     }
   }
 
@@ -51,14 +50,6 @@
 
 @include viewport--tablet {
   .programm {
-    &__block {
-      //flex-direction: column;
-
-      &--reverse {
-
-      }
-    }
-
     &__slider {
       width: 50%;
 
@@ -81,7 +72,6 @@
         max-width: 570px;
       }
     }
-  
   }
 }
 
@@ -101,6 +91,7 @@
         max-height: 350px;
       }
     }
+
     &__content {
       width: 100%;
       padding: 30px 16px;
