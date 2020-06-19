@@ -1,10 +1,12 @@
 .slider {
+  margin-bottom: 150px;
+
   &__item {
     //height: 670px;
     img {
-      width: 746px;
-      height: 30vw;
-      max-height: 500px;
+      width: 100%;
+      height: 40vw;
+      max-height: 700px;
       object-fit: cover;
       object-position: center;
 
@@ -13,6 +15,39 @@
         height: 46vw;
         max-height: 320px;
       }
+    }
+  }
+
+  &__quote {
+    margin-bottom: 90px;
+
+    span {
+      font-size: 70px;
+      line-height: 70px;
+      font-family: none;
+      text-align: center;
+      display: flex;
+      margin: 0 auto;
+      width: max-content;
+    }
+
+    p {
+      font-size: 32px;
+      line-height: 1.35;
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto;
+      margin-bottom: 32px;
+      font-weight: 300;
+      color: #3f3d3d;
+    }
+
+    b {
+      display: block;
+      margin: 0 auto;
+      width: max-content;
+      font-size: 15px;
+      line-height: 1.55;
     }
   }
 }

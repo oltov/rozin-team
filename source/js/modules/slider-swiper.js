@@ -11,22 +11,26 @@ const initSliderSwiper = () => {
 
   const newSlider = new Swiper(slider, {
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 0,
     speed: 600,
     loop: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     navigation: {
       nextEl: `#top-slider-next`,
       prevEl: `#top-slider-prev`,
     },
 
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 2,
-      }
-    }
+    // breakpoints: {
+    //   768: {
+    //     slidesPerView: 2,
+    //   },
+    //   1024: {
+    //     slidesPerView: 1,
+    //   }
+    // }
   });
 
   const toggleSwitch = () => {
