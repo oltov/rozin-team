@@ -4,6 +4,8 @@
 // import {initModals} from './modules/init-modals';
 import {initSliderSwiper} from './modules/slider-swiper';
 import {eventHeader} from './modules/header-event';
+import {inputsEvent} from './modules/form-event';
+
 
 // Utils
 // ---------------------------------
@@ -19,4 +21,5 @@ import {eventHeader} from './modules/header-event';
 document.addEventListener(`DOMContentLoaded`, () => {
   initSliderSwiper();
   eventHeader();
+  inputsEvent();
 });
