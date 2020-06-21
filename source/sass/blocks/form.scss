@@ -55,7 +55,7 @@
     top: 50%;
     transform-origin: top left;
     transform: translateY(-50%);
-    font-size: 20px;
+    font-size: 18px;
     line-height: 20px;
     font-weight: 300;
     vertical-align: baseline;
@@ -88,7 +88,7 @@
 
   &__warning {
     position: absolute;
-    top: 32px;
+    top: 40px;
     left: 0;
     font-size: 13px;
     line-height: 15px;
@@ -123,5 +123,9 @@
 @include viewport--tablet {
   .form {
     max-width: 80vw;
+
+    &__warning {
+      top: 34px;
+    }
   }
 }
