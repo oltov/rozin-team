@@ -4,4 +4,11 @@
   font-weight: 500;
   margin-bottom: 70px;
   text-align: center;
+  font-size: 36px;
+  line-height: 40px;
+
+  &--form {
+    text-align: left;
+    margin-bottom: 24px;
+  }
 }

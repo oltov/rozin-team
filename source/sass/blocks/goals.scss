@@ -57,6 +57,8 @@
 
 @include viewport--tablet {
   .goals {
+    margin-bottom: 100px;
+
     &__item {
       min-height: 600px;
     }

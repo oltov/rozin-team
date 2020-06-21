@@ -45,6 +45,8 @@
 
 @include viewport--tablet {
   .skills {
+    margin-bottom: 100px;
+
     &__svg {
       margin-right: 20px;
 
