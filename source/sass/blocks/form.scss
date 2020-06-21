@@ -28,7 +28,7 @@
       }
 
       > .form__label {
-        transform: translate3d(0px, -30px, 0) scale(0.7);
+        transform: translate3d(0, -30px, 0) scale(0.7);
         color: #2196f3;
       }
     }
@@ -46,7 +46,6 @@
       &::before {
         background-color: tomato;
       }
-
     }
   }
 
@@ -66,7 +65,7 @@
       scale 0.4s ease,
       color 0.4s ease;
     cursor: text;
-   }
+  }
 
   &__input {
     width: 100%;

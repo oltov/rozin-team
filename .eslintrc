@@ -19,3 +19,11 @@ rules:
     - off
   no-undef:
     - off
+  curly:
+    - off
+  no-alert:
+    - off
+  eqeqeq:
+    - off
+  no-return-assign:
+    - off
