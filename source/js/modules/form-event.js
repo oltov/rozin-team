@@ -1,7 +1,9 @@
 const inputsEvent = () => {
   const inputs = document.querySelectorAll('[data-input]')
   const wrappers = document.querySelectorAll('[data-input-wrapper]')
+  const nameRegexp = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
   const emailRegexp = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
+  const phoneRegexp = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
 
   inputs.forEach((item, index) => {
     item.addEventListener('focus', (e) => {

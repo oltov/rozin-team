@@ -71,16 +71,22 @@
       font-size: 18px;
       line-height: 22px;
       outline: none;
+      box-shadow: 0 2px 23px -4px rgba(10,10,10,.59);
+
       transition:
         background-color 0.1s ease-in-out,
-        opacity 0.1s ease-in-out;
+        // opacity 0.1s ease-in-out,
+        box-shadow 0.2s ease-in-out,
+        transform 0.2s ease-in-out;
 
       &:not(:last-child) {
         margin-right: 20px;
       }
 
       &:hover {
-        opacity: 0.8;
+        transform: translateY(1px);
+        box-shadow: 0 2px 5px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.05);
+        // opacity: 0.8;
       }
     }
 
@@ -88,9 +94,11 @@
       background-color: #b7bbb3;
       opacity: 1;
       box-shadow: none;
+      transform: translateY(1px);
 
       &:hover {
         opacity: unset;
+        box-shadow: none;
       }
     }
   }
