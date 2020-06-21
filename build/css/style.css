@@ -1233,6 +1233,10 @@ input:matches([type="email"],
     -webkit-transform: translate3d(-50%, 0, 0);
             transform: translate3d(-50%, 0, 0); } }
 
+@media (max-width: 1023px) {
+  .header-wrapper {
+    margin-bottom: 100px; } }
+
 .header-content {
   padding-top: 200px;
   padding-right: 47%;
@@ -1337,6 +1341,10 @@ input:matches([type="email"],
       width: max-content;
       font-size: 15px;
       line-height: 1.55; }
+
+@media (max-width: 1023px) {
+  .slider {
+    margin-bottom: 100px; } }
 
 .slider-btn--goals {
   margin-bottom: 70px; }
@@ -1595,14 +1603,16 @@ input:matches([type="email"],
     margin: 0; }
 
 @media (max-width: 1023px) {
-  .skills__svg {
-    margin-right: 20px; }
-    .skills__svg svg {
-      width: 40px;
-      height: 40px; }
-  .skills__text p {
-    font-size: 16px;
-    line-height: 24px; } }
+  .skills {
+    margin-bottom: 100px; }
+    .skills__svg {
+      margin-right: 20px; }
+      .skills__svg svg {
+        width: 40px;
+        height: 40px; }
+    .skills__text p {
+      font-size: 16px;
+      line-height: 24px; } }
 
 @media (max-width: 767px) {
   .skills__title {
@@ -1673,19 +1683,21 @@ input:matches([type="email"],
       margin-bottom: 10px; }
 
 @media (max-width: 1023px) {
-  .goals__item {
-    min-height: 600px; }
-  .goals__img {
-    width: 60%; }
-  .goals__content {
-    width: 40%;
-    min-height: 500px; }
-    .goals__content p {
-      font-size: 14px;
-      line-height: 20px; }
-  .goals__data span {
-    line-height: 20px;
-    font-size: 16px; } }
+  .goals {
+    margin-bottom: 100px; }
+    .goals__item {
+      min-height: 600px; }
+    .goals__img {
+      width: 60%; }
+    .goals__content {
+      width: 40%;
+      min-height: 500px; }
+      .goals__content p {
+        font-size: 14px;
+        line-height: 20px; }
+    .goals__data span {
+      line-height: 20px;
+      font-size: 16px; } }
 
 @media (max-width: 767px) {
   .goals__title {
@@ -1751,15 +1763,17 @@ input:matches([type="email"],
       height: 50vh; }
 
 @media (max-width: 1023px) {
-  .programm__slider {
-    width: 50%; }
-  .programm__content {
-    width: 50%;
-    padding: 30px 40px; }
-    .programm__content p {
-      font-size: 17px;
-      line-height: 22px;
-      max-width: 570px; } }
+  .programm {
+    margin-bottom: 100px; }
+    .programm__slider {
+      width: 50%; }
+    .programm__content {
+      width: 50%;
+      padding: 30px 40px; }
+      .programm__content p {
+        font-size: 17px;
+        line-height: 22px;
+        max-width: 570px; } }
 
 @media (max-width: 767px) {
   .programm__block {

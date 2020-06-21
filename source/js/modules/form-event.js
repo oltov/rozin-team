@@ -2,15 +2,16 @@ const inputsEvent = () => {
   const inputs = document.querySelectorAll('[data-input]')
   const wrappers = document.querySelectorAll('[data-input-wrapper]')
   const submitButtone = document.querySelector('.form__button')
-  const form = document.querySelector('.form')
+  const form = document.querySelector('.form');
+  let isData = false;
 
   const regexp = {
-    name: /^[А-Я][а-я]{1,20}$/,
+    name: /[а-я]{1,20}$/,
     email: /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/,
     phone: /^\+7[0-9]{10}$/
   }
 const userData = {
-  'id': new Date(),
+  id: new Date(),
   name: '',
   email: '',
   phone: ''
@@ -37,7 +38,17 @@ const userData = {
 
   submitButtone.addEventListener('click', evt => {
     evt.preventDefault();
-    inputs.forEach(item => item.value = '')
+
+    for(let data in userData) {
+      if (userData[data] == false) isData = false;
+      else isData = true;
+    }
+    if (isData) {
+      alert('Заявка отпралена.');
+      isData = false;
+      inputs.forEach(item => item.value = '');
+      wrappers.forEach(item => item.classList.remove('form__inner--active'));
+    } else alert('Форма не заполнена или заполнена неверно.')
   })
 }
 

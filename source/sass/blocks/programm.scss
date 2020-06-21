@@ -50,6 +50,8 @@
 
 @include viewport--tablet {
   .programm {
+    margin-bottom: 100px;
+
     &__slider {
       width: 50%;
 

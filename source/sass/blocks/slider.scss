@@ -51,3 +51,10 @@
     }
   }
 }
+
+@include viewport--tablet {
+  .slider {
+    margin-bottom: 100px;
+  }
+}
+
