@@ -4,24 +4,23 @@
   <form class="form">
     <div class="form__inner" data-input-wrapper="name">
       <label class="form__label" for="name">имя</label>
-      <!-- <span class="form__desc">имя</span> -->
       <input id="name" class="form__input" type="text" data-input="name">
+      <span class="form__warning">Имя должно содержать только буквы</span>
     </div>
     <div class="form__inner" data-input-wrapper="email">
       <label class="form__label" for="email">электронная почта</label>
-      <!-- <span class="form__desc">электронная почта</span> -->
       <input id="email" class="form__input" type="text" data-input="email">
+      <span class="form__warning">Неверный формат email адреса.</span>
     </div>
     <div class="form__inner" data-input-wrapper="phone-number">
       <label class="form__label" for="phone-number">телефон</label>
-      <!-- <span class="form__desc">телефон</span> -->
-      <input id="phone-number" class="form__input" type="tel" data-input="phone-number">
+      <input id="phone-number" class="form__input" type="tel" data-input="phone">
+      <span class="form__warning">Телефон должен быть указан в формате +7xxxxxxxxxx</span>
     </div>
     <button class="form__button" type="submit">Отправить</button>
   </form>
-  <p class="user-data__tagline">
+  <!-- <p class="user-data__tagline">
     Я предлагаю первоклассные тренировки с уникальной программой. Свяжитесь со мной, чтобы задать интересующие вопросы.
-  </p>
-  <a href="mailto:rozin-viktor@list.ru" class="header__social-link" title="e-mail">rozin-viktor@list.ru</a>
-  <a class="header__social-link" href="tel:+79637641005">+7 963 764 10 05</a>
+  </p> -->
+  <!-- <a href="mailto:rozin-viktor@list.ru" class="header__social-link" title="e-mail">rozin-viktor@list.ru</a> -->
 </section>

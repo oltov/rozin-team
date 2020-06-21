@@ -1,34 +1,43 @@
 const inputsEvent = () => {
   const inputs = document.querySelectorAll('[data-input]')
   const wrappers = document.querySelectorAll('[data-input-wrapper]')
-  const nameRegexp = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
-  const emailRegexp = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
-  const phoneRegexp = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
+  const submitButtone = document.querySelector('.form__button')
+  const form = document.querySelector('.form')
+
+  const regexp = {
+    name: /^[А-Я][а-я]{1,20}$/,
+    email: /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/,
+    phone: /^\+7[0-9]{10}$/
+  }
+const userData = {
+  'id': new Date(),
+  name: '',
+  email: '',
+  phone: ''
+}
 
   inputs.forEach((item, index) => {
     item.addEventListener('focus', (e) => {
       wrappers[index].classList.add('form__inner--active')
     });
 
-    item.addEventListener('invalid', () => {
-      // console.log('ручная проверка ', + item.checkValidity(item))
-      wrappers[index].classList.add('form__inner--warning')
-      // item.setCustomValidity('Поле должно содержать только буковки');
-    });
-
     item.addEventListener('blur', () => {
+      let dataValue = item.getAttribute('data-input');
       if (!item.value) {
         wrappers[index].classList.remove('form__inner--active')
-        console.log('поле пусто')
-      } else if (item.value && !emailRegexp.test(item.value.trim())) {
-        console.log('ошибка')
+      } else if (item.value && !regexp[dataValue].test(item.value.trim())) {
         wrappers[index].classList.add('form__inner--warning')
+        console.log(userData[dataValue])
       } else {
-        //emailRegexp.test(item.value.trim());
-        wrappers[index].classList.remove('form__inner--warning')
-        //console.log(emailRegexp.test(item.value.trim()))
+        wrappers[index].classList.remove('form__inner--warning');
+        userData[dataValue] = item.value.trim()
       }
     });
+  });
+
+  submitButtone.addEventListener('click', evt => {
+    evt.preventDefault();
+    inputs.forEach(item => item.value = '')
   })
 }
 

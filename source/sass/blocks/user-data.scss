@@ -9,10 +9,16 @@
   }
 
   &__tagline {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 24px;
     font-weight: 300;
     margin-bottom: 40px;
     max-width: 60%;
+  }
+}
+
+@include viewport--tablet {
+  .user-data {
+    margin-bottom: 100px;
   }
 }
